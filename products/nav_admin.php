@@ -17,7 +17,7 @@ crossorigin="anonymous">
   </head>
   <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="admin_dashboard.php">CRUD MKTime</a>
+  <a class="navbar-brand" href="nav_admin.php">CRUD MKTime</a>
   <button class="navbar-toggler" type="button" 
 data-toggle="collapse" 
 data-target="#navbarNav" 
@@ -42,7 +42,9 @@ aria-expanded="false" aria-label="Toggle navigation">
     </ul>
   </div>
 </nav>  
-
+ 
+<div class="container-admin p-3">
 <h1>Welcome to your admin page!</h1>
-<a href="create.php" class="btn btn-dark">Add New Product</a>
-<a href="update.php" class="btn btn-dark">Manage Products</a>
+<!-- <a href="create.php" class="btn btn-dark">Add New Product</a>
+<a href="update.php" class="btn btn-dark">Manage Products</a> -->
+</div>

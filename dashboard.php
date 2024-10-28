@@ -1,10 +1,10 @@
 <?php
 
-# starting the session
-session_start() ;
-
 # include navigation menu
 include ('includes/nav.php'); 
+
+  # Access session.
+  session_start() ;
 
 # Check if user is logged in using session or cookie.
 if (!isset($_SESSION['user_id'])) {
@@ -70,8 +70,7 @@ while ( $row = mysqli_fetch_array( $r, MYSQLI_ASSOC )) {
             </ul>
             <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a href="./alphaStar.php" type="button" class="btn btn-sm btn-outline-secondary">View</a>
-                    <a href="cart.php" type="button" class="btn btn-sm btn-outline-secondary">Add to basket</a>
+                    <a href="added.php?id='.$row['item_id'].'" type="button" class="btn btn-sm btn-outline-secondary">Add to basket</a>
                 </div>
             </div>
         </div>            
@@ -83,7 +82,7 @@ echo '</div>';  # Close row
 echo '</div>';  # Close container
 echo '</div>';  # Close album
 
-//else {
+// else {
 //     # If no items are found, display a message.
 //     echo '<p>There are currently no items in the table to display.</p>';
 // }

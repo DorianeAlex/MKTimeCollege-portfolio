@@ -1,4 +1,8 @@
-<?php include ('includes/nav.php');?>
+<?php 
+# starting the session
+session_start() ;
+
+include ('includes/nav.php');?>
 
   <div class="container mt-5">
     <div class="row featurette">
@@ -21,7 +25,7 @@
         <img src="./images/watch.jpg" class="featurette-image img-fluid mx-auto border rounded-3 shadow-lg mb-4" alt="watch" width="500" height="500">
       </div>
     </div>
-  </div>
+</div>
 
 
-  <?php include 'includes/footer.php' ?>
+  <?php include 'includes/footer.php'; ?>

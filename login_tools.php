@@ -1,5 +1,8 @@
 <?php
 
+# Access session.
+session_start() ;
+
 # Function to load specified or default URL.
 function load( $page = 'login.php' )
 {
@@ -40,18 +43,18 @@ function validate( $link, $email = '', $pwd = '')
   {
     $q = "SELECT user_id, first_name, last_name FROM users WHERE email='$e' AND password='$p'" ;  
     $r = mysqli_query ( $link, $q ) ;
-
     if ( @mysqli_num_rows( $r ) == 1 ) 
     {
       $row = mysqli_fetch_array ( $r, MYSQLI_ASSOC ) ;
       return array( true, $row ) ; 
-    }
+    
     # Or on failure set error message.
-    else { 
+    }else { 
         $errors[] = 'Email address and password not found.' ; }
   }
   # On failure retrieve error message/s.
   return array( false, $errors ) ; 
 }
+
 
 ?>

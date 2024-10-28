@@ -1,12 +1,11 @@
 <?php
 
-# Access session.
-session_start() ;
+
 // # Redirect if not logged in.
-// if ( !isset( $_SESSION[ 'user_id' ] ) ) { require_once ( 'login_tools.php' ) ; load() ; }
+// if ( !isset( $_SESSION[ 'user_id' ] ) ) { require ( 'login_tools.php' ) ; load() ; }
 
 # form submission check
-if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
+if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' ) {
 
 # database connection
 require ( 'connect_db.php' ) ;
@@ -19,6 +18,8 @@ list ( $check, $data ) = validate ( $link, $_POST[ 'email' ], $_POST[ 'pass' ] )
 
 # handling login success
 if ( $check ) {
+  # Access session.
+  session_start() ;
   # storing the user data in session
   $_SESSION[ 'user_id' ] = $data[ 'user_id' ] ;
   $_SESSION[ 'first_name' ] = $data[ 'first_name' ] ;
@@ -40,5 +41,11 @@ else {
 
 # closing database
 mysqli_close( $link ) ;
+
+}
+// else {
+//     # Redirect to login page if the form is not submitted via POST.
+//     load('login.php');
+// }
 
 ?>

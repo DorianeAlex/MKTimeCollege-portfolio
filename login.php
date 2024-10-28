@@ -26,7 +26,7 @@ if ( isset( $errors ) && !empty( $errors ) )
     </div>
 
     <div class="mb-3">
-    <label for="inputemail">Password</label>
+    <label for="inputpassword">Password</label>
     <input type="password" 
 		  name="pass"  
 	    class="form-control" 
@@ -39,4 +39,4 @@ if ( isset( $errors ) && !empty( $errors ) )
 </main>
 
     
-<?php include 'includes/footer.php' ?>
+<?php include 'includes/footer.php'; ?>
