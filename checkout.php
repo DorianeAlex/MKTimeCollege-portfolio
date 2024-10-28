@@ -53,7 +53,10 @@ if ( isset( $_GET['total'] ) && ( $_GET['total'] > 0 ) && (!empty($_SESSION['car
     $_SESSION['cart'] = NULL ;
 
     # message cart is empty
-} else { echo ' <h4 class="fw-bold">Your cart is empty.</h4> ' ; 
+} else { echo ' 
+    <div class="container p-5 text-center">
+    <h2 class="fw-bold">Your cart is empty</h2>  
+    </div>' ;
 }
 
 

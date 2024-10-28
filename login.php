@@ -20,7 +20,7 @@ if ( isset( $errors ) && !empty( $errors ) )
       <label for="inputemail">Email</label>
       <input type="text" 
 		  name="email" 
-		  class="form-control" 
+		  class="form-control email-input" 
 		  required 
 		  placeholder="* Enter Email"> 
     </div>
@@ -29,12 +29,12 @@ if ( isset( $errors ) && !empty( $errors ) )
     <label for="inputpassword">Password</label>
     <input type="password" 
 		  name="pass"  
-	    class="form-control" 
+	    class="form-control pass-input" 
 		  required 
 	    placeholder="* Enter Password">
     </div>
 
-  <button type="submit" value="Login" class="btn btn-dark">Login</button>
+  <button type="submit" value="Login" class="btn btn-dark">Submit</button>
   </form>
 </main>
 

@@ -26,7 +26,7 @@
               <a class="nav-link active" aria-current="page" href="./dashboard.php">HOME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./cart.php">YOUR BASKET</a>
+              <a class="nav-link basket" href="./cart.php">YOUR BASKET</a>
             </li>
             <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="./collections.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">THE COLLECTION</a>
@@ -45,7 +45,7 @@
         </div>
         <div class="px-3 py-2 mb-3">
           <div class="container d-flex flex-wrap justify-content-center text-end">
-          <a href="./login.php" class="btn btn-light text-dark me-2" role="button">Login</a>
+          <a href="./login.php" class="btn btn-light text-dark me-2 login-btn" role="button">Login</a>
           <?php
 # Check if the user is logged in (i.e., session user_id is set).
 if (isset($_SESSION['user_id'])) {
