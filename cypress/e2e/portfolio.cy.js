@@ -27,5 +27,12 @@ describe('testing MKtime website and functionalities', () => {
       // also check for specified CSS classes
       .and('have.class', 'text-center');
   });
+
+  // test that tabs in the navbar should appear
+  it('tabs on the homepage are corrects', () => {
+    // getting the <li> element and choosing the second element in it
+    // assert it contains the right text
+    cy.get("li").eq(2).contains("SERVICING AND REPAIRS")
+  });
   });
 
